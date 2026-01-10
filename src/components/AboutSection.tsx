@@ -1,4 +1,5 @@
-import { Heart, Shield, Users, Award } from 'lucide-react';
+import { Heart, Shield, Users, Award, CheckCircle } from 'lucide-react';
+import aboutTeamImage from '@/assets/about-team.jpg';
 
 const features = [
   {
@@ -23,13 +24,22 @@ const features = [
   },
 ];
 
+const highlights = [
+  'NABH Accredited Hospital',
+  'Multi-Specialty Services',
+  'Modern Infrastructure',
+  'Affordable Healthcare',
+  'Insurance Tie-ups',
+  '24/7 Emergency Services',
+];
+
 const AboutSection = () => {
   return (
-    <section id="about" className="section-padding gradient-accent">
+    <section id="about" className="section-padding gradient-accent overflow-hidden">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
-          <div>
+          <div className="animate-slide-in-left">
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">
               About Us
             </span>
@@ -43,53 +53,78 @@ const AboutSection = () => {
               affordable, and high-quality healthcare to every patient who walks 
               through our doors.
             </p>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              With a team of experienced doctors, modern infrastructure, and a 
-              patient-first approach, we have become a beacon of hope for thousands 
-              of families. Our commitment to excellence drives us to continuously 
-              improve and innovate in medical care.
-            </p>
 
-            {/* Mission & Vision */}
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div className="bg-card p-6 rounded-lg shadow-card">
-                <h3 className="font-heading font-bold text-primary text-xl mb-2">
-                  Our Mission
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  To deliver compassionate, patient-centered healthcare with integrity.
+            {/* Image with Overlay */}
+            <div className="relative rounded-2xl overflow-hidden mb-8 group">
+              <img 
+                src={aboutTeamImage} 
+                alt="Our Medical Team"
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-primary-foreground font-heading font-bold text-lg">
+                  50+ Expert Doctors & Specialists
                 </p>
-              </div>
-              <div className="bg-card p-6 rounded-lg shadow-card">
-                <h3 className="font-heading font-bold text-secondary text-xl mb-2">
-                  Our Vision
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  To be the region's most trusted healthcare destination.
+                <p className="text-primary-foreground/80 text-sm">
+                  Dedicated to your health and well-being
                 </p>
               </div>
             </div>
+
+            {/* Highlights Grid */}
+            <div className="grid grid-cols-2 gap-3">
+              {highlights.map((item) => (
+                <div key={item} className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                  <span className="text-foreground text-sm font-medium">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Right - Features Grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="bg-card p-6 rounded-xl shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <feature.icon className="w-7 h-7 text-primary" />
+          {/* Right - Features Grid & Mission/Vision */}
+          <div className="space-y-6 animate-slide-in-right">
+            {/* Features Grid */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              {features.map((feature, index) => (
+                <div
+                  key={feature.title}
+                  className="bg-card p-5 rounded-xl shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 group"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                    <feature.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-heading font-bold text-foreground text-base mb-1">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="font-heading font-bold text-foreground text-lg mb-2">
-                  {feature.title}
+              ))}
+            </div>
+
+            {/* Mission & Vision */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="bg-primary p-6 rounded-xl shadow-elevated">
+                <h3 className="font-heading font-bold text-primary-foreground text-xl mb-2">
+                  Our Mission
                 </h3>
-                <p className="text-muted-foreground text-sm">
-                  {feature.description}
+                <p className="text-primary-foreground/90 text-sm leading-relaxed">
+                  To deliver compassionate, patient-centered healthcare with integrity and excellence.
                 </p>
               </div>
-            ))}
+              <div className="bg-secondary p-6 rounded-xl shadow-elevated">
+                <h3 className="font-heading font-bold text-secondary-foreground text-xl mb-2">
+                  Our Vision
+                </h3>
+                <p className="text-secondary-foreground/90 text-sm leading-relaxed">
+                  To be the region's most trusted and preferred healthcare destination.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
