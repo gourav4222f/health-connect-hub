@@ -9,6 +9,7 @@ import FAQSection from '@/components/FAQSection';
 import ContactSection from '@/components/ContactSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
+import FloatingButtons from '@/components/FloatingButtons';
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
       <ContactSection />
       <CTASection />
       <Footer />
+      <FloatingButtons />
     </div>
   );
 };
