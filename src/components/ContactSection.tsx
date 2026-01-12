@@ -9,19 +9,19 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Address',
-    content: 'Near Main Market, City Center Road, Your City - 123456',
+    content: 'Averni Chauraha, Jugsana Road, Baldeo, Mathura 281301',
   },
   {
     icon: Phone,
     title: 'Phone',
-    content: '+91 98765 43210 | +91 12345 67890',
-    href: 'tel:+919876543210',
+    content: '+91 70288 55846 | +91 92050 69846',
+    href: 'tel:+917028855846',
   },
   {
     icon: Mail,
     title: 'Email',
-    content: 'info@srshospital.com',
-    href: 'mailto:info@srshospital.com',
+    content: 'dr.djj0103@gmail.com',
+    href: 'mailto:dr.djj0103@gmail.com',
   },
   {
     icon: Clock,
@@ -109,14 +109,14 @@ const ContactSection = () => {
             {/* Map */}
             <div className="rounded-xl overflow-hidden shadow-card h-64 lg:h-80">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.847!2d72.5!3d23.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAzJzAwLjAiTiA3MsKwMzAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3543.7!2d77.7849!3d27.4075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDI0JzI3LjAiTiA3N8KwNDcnMDUuNiJF!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Hospital Location"
+                title="Hospital Location - Baldeo, Mathura"
               />
             </div>
           </div>
@@ -198,7 +198,7 @@ const ContactSection = () => {
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
                 <a
-                  href="https://wa.me/919876543210?text=Hello, I would like to get in touch with SRS Hospital."
+                  href="https://wa.me/917028855846?text=Hello, I would like to get in touch with SRS Hospital."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1"

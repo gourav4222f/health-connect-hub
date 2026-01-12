@@ -60,8 +60,8 @@ const services = [
 ];
 
 const ServicesSection = () => {
-  const phoneNumber = '919876543210';
-  const whatsappMessage = 'Hello, I would like to book an appointment at SRS Hospital.';
+  const phoneNumber = '917028855846';
+  const whatsappMessage = 'Hello, I would like to book an appointment at Shree Ratan Siddhivinayaka Hospital.';
 
   return (
     <section id="services" className="section-padding bg-background">

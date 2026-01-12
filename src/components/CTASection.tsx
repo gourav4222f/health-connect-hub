@@ -29,14 +29,14 @@ const CTASection = () => {
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </a>
-            <a href="tel:+919876543210">
+            <a href="tel:+917028855846">
               <Button
                 size="lg"
                 variant="outline"
                 className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-8 py-6 text-lg gap-2"
               >
                 <Phone className="w-5 h-5" />
-                Call: +91 98765 43210
+                Call: +91 70288 55846
               </Button>
             </a>
           </div>
