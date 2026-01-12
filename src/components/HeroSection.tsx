@@ -62,7 +62,7 @@ const HeroSection = () => {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
-              <a href="tel:+919876543210">
+              <a href="tel:+917028855846">
                 <Button
                   size="lg"
                   variant="outline"
@@ -85,7 +85,7 @@ const HeroSection = () => {
                 </div>
                 <div>
                   <h3 className="font-heading font-bold text-foreground text-lg">Emergency Helpline</h3>
-                  <p className="text-primary text-xl font-bold">+91 98765 43210</p>
+                  <p className="text-primary text-xl font-bold">+91 70288 55846</p>
                 </div>
               </div>
             </div>
@@ -111,7 +111,7 @@ const HeroSection = () => {
                 </div>
                 <div>
                   <h3 className="font-heading font-bold text-foreground text-lg">Our Location</h3>
-                  <p className="text-muted-foreground text-sm">123 Healthcare Avenue, Medical District</p>
+                  <p className="text-muted-foreground text-sm">Averni Chauraha, Baldeo, Mathura</p>
                 </div>
               </div>
             </div>

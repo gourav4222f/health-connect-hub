@@ -3,8 +3,8 @@ import { useState } from 'react';
 
 const FloatingButtons = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const phoneNumber = '919876543210';
-  const whatsappMessage = 'Hello, I would like to book an appointment at SRS Hospital.';
+  const phoneNumber = '917028855846';
+  const whatsappMessage = 'Hello, I would like to book an appointment at Shree Ratan Siddhivinayaka Hospital.';
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">

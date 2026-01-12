@@ -96,19 +96,19 @@ const Footer = () => {
               <li className="flex gap-3 text-sm">
                 <MapPin className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                 <span className="text-primary-foreground/80">
-                  Near Main Market, City Center Road, Your City - 123456
+                  Averni Chauraha, Jugsana Road, Baldeo, Mathura 281301
                 </span>
               </li>
               <li className="flex gap-3 text-sm">
                 <Phone className="w-5 h-5 text-secondary flex-shrink-0" />
-                <a href="tel:+919876543210" className="text-primary-foreground/80 hover:text-secondary">
-                  +91 98765 43210
+                <a href="tel:+917028855846" className="text-primary-foreground/80 hover:text-secondary">
+                  +91 70288 55846 | +91 92050 69846
                 </a>
               </li>
               <li className="flex gap-3 text-sm">
                 <Mail className="w-5 h-5 text-secondary flex-shrink-0" />
-                <a href="mailto:info@srshospital.com" className="text-primary-foreground/80 hover:text-secondary">
-                  info@srshospital.com
+                <a href="mailto:dr.djj0103@gmail.com" className="text-primary-foreground/80 hover:text-secondary">
+                  dr.djj0103@gmail.com
                 </a>
               </li>
               <li className="flex gap-3 text-sm">
