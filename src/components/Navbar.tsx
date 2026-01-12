@@ -1,20 +1,21 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/logo-shree-ratan.png';
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,22 +35,22 @@ const Navbar = () => {
     >
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="SRS Hospital" className="h-12 md:h-14" />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
+              to={link.href}
               className={`font-medium transition-colors duration-200 hover:text-primary ${
-                isScrolled ? 'text-foreground' : 'text-foreground/90'
+                location.pathname === link.href ? 'text-primary' : isScrolled ? 'text-foreground' : 'text-foreground/90'
               }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -81,14 +82,14 @@ const Navbar = () => {
         <div className="lg:hidden absolute top-full left-0 right-0 bg-card shadow-elevated animate-fade-in">
           <div className="container-custom py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
-                className="font-medium text-foreground hover:text-primary py-2"
+                to={link.href}
+                className={`font-medium py-2 ${location.pathname === link.href ? 'text-primary' : 'text-foreground hover:text-primary'}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <a href="tel:+919876543210">
               <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
